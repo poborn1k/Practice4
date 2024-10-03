@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/previewView" />
+
+    <ImageButton
+        android:id="@+id/take_photo_button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/photo_button"
+        android:scaleType="fitCenter"
+        android:padding="0dp"
+        android:backgroundTint="#00000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/previewView" />
+
+    <ImageButton
+        android:id="@+id/show_list_button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#00000000"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/photo_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/take_photo_button"
+        app:layout_constraintTop_toBottomOf="@+id/previewView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
